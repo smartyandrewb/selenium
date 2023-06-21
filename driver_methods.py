@@ -6,30 +6,14 @@ import time
 driver = webdriver.Chrome()
 driver.get("http://www.smartystreets.me")
 time.sleep(2)
-driver.quit()
 
-#Navigate Forward
-# driver.forward()
-#
-# #Navigate Backward
-# driver.back()
-#
-# #refresh the page
-# driver.refresh()
-#
-# time.sleep(1)
-#
-#
-# time.sleep(1)
-#
-#
-# time.sleep(1)
-#
-#
-# time.sleep(1)
-#
-#
-# time.sleep(1)
-#
-#
-# driver.quit()
+driver.back()
+time.sleep(2)
+
+driver.forward()
+time.sleep(2)
+
+driver.refresh()
+time.sleep(2)
+
+driver.quit()
