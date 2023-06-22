@@ -10,7 +10,7 @@ import math
 current_time = math.floor(time.time())
 email = "andrew.blonquist+" + str(current_time) + "@smarty.com"
 
-#Instantiate our Webdriver Object
+# Instantiate our Webdriver Object
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(chrome_options)
@@ -23,20 +23,22 @@ signup_button = driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div[
 signup_button.click()
 time.sleep(2)
 
-#Continue with free trial
+# Continue with free trial
 free_trial_btn = driver.find_element(By.CLASS_NAME, "btn--blue-large")
 free_trial_btn.click()
 time.sleep(2)
 
-#Click checkbox and click continue with email
+# Click checkbox and click continue with email
 checkbox = driver.find_element(By.CLASS_NAME, "PrivateSwitchBase-input")
 checkbox.click()
 time.sleep(1)
 
+# find and click continue with email
 continue_with_email = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[2]/a[3]/div")
 continue_with_email.click()
 time.sleep(1)
 
+# find all form elements
 email_input = driver.find_element(By.ID, ":r0:")
 first_name = driver.find_element(By.ID, ":r1:")
 last_name = driver.find_element(By.ID, ":r2:")
@@ -47,7 +49,7 @@ confirm_password = driver.find_element(By.ID, ":r6:")
 lookups = driver.find_element(By.NAME, "anticipated_number_of_lookups")
 create_acc_btn = driver.find_element(By.XPATH, "//*[@id='signup-form']/button")
 
-
+# write to each form item
 email_input.send_keys(email)
 first_name.send_keys("Andrew")
 last_name.send_keys("Blonquist")
